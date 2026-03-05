@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>spanking随机场景模拟器</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    text-align:center;
+    background:#f4f4f4;
+    margin-top:120px;
+}
+
+h1{
+    font-size:32px;
+}
+
+button{
+    padding:15px 30px;
+    font-size:20px;
+    background:#4CAF50;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#45a049;
+}
+
+#result{
+    margin-top:40px;
+    font-size:28px;
+    color:#333;
+    font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>随机选择器</h1>
+
+<button onclick="pickOption()">点击随机抽取</button>
+
+<div id="result">点击按钮开始</div>
+
+<script>
+
+let options = [
+"选项1：跪撅",
+"选项2：尿布式",
+"选项3：平趴",
+"选项4：otk",
+"选项5：双手扶墙"
+];
+
+function pickOption(){
+
+let randomIndex = Math.floor(Math.random() * options.length);
+
+let chosen = options[randomIndex];
+
+document.getElementById("result").innerText = chosen;
+
+}
+
+</script>
+
+</body>
+</html>
